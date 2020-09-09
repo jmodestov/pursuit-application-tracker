@@ -1,0 +1,26 @@
+* {
+  padding: 0px;
+  margin: 0px;
+}
+
+#viewType {
+  display: flex;
+  height: 70px;
+  border: 1px black solid;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0px 40px;
+  
+  button {
+    color: black;
+    padding: 7px 20px;
+    border: none;
+    background-color: rgb(134, 197, 255);
+    border-radius: 10px;
+    font-size: 1.2rem;
+  }
+  .viewOption{
+    margin-right: 15px;
+  }
+ 
+}
