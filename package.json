@@ -4,7 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "NODE_ENV=production node server/server.js",
+    "build": "NODE_ENV=production webpack",
+    "dev": "NODE_ENV=development concurrently \"nodemon server/server.js\" \"webpack-dev-server --open\""
   },
   "repository": {
     "type": "git",
@@ -23,6 +26,7 @@
     "@babel/preset-react": "^7.10.4",
     "babel-loader": "^8.1.0",
     "css-loader": "^4.3.0",
+    "nodemon": "^2.0.4",
     "sass-loader": "^10.0.2",
     "style-loader": "^1.2.1",
     "webpack": "^4.44.1",
