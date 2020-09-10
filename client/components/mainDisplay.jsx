@@ -16,6 +16,7 @@ const MainDisplay = (props) => {
     newPosition,
     newDate,
     newStatus,
+    saveNewJob,
   } = props;
   const items = [];
 
@@ -25,7 +26,7 @@ const MainDisplay = (props) => {
     });
   }
   // Add a job if addJob is true. This new record will have input fields.
-  console.log('This should be false ', addJobCard);
+
   if (addJobCard) {
     items.unshift(
       <NewJobCard
@@ -37,6 +38,7 @@ const MainDisplay = (props) => {
         updateNewPosition={updateNewPosition}
         updateNewDate={updateNewDate}
         updateNewStatus={updateNewStatus}
+        saveNewJob={saveNewJob}
       />
     );
   }

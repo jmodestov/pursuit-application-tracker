@@ -46,6 +46,11 @@ const jobAppsReducer = (state = initialState, action) => {
         ...state,
         newStatus: action.payload,
       };
+    case types.SAVE_NEW_JOB:
+      // do fetch request here?
+      return {
+        ...state,
+      };
     default:
       return state;
   }

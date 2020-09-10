@@ -42,6 +42,7 @@ const App = (props) => (
       updateNewPosition={props.updateNewPosition}
       updateNewDate={props.updateNewDate}
       updateNewStatus={props.updateNewStatus}
+      saveNewJob={props.saveNewJob}
     />
   </div>
 );

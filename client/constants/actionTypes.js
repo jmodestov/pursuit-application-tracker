@@ -9,3 +9,5 @@ export const UPDATE_NEW_POSITION = 'UPDATE_NEW_POSITION';
 export const UPDATE_NEW_DATE = 'UPDATE_NEW_DATE';
 
 export const UPDATE_NEW_STATUS = 'UPDATE_NEW_STATUS';
+
+export const SAVE_NEW_JOB = 'SAVE_NEW_JOB';

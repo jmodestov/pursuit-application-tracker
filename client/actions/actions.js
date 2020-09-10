@@ -47,6 +47,13 @@ export const updateNewStatus = (data) => (dispatch) => {
   });
 };
 
+// Do fetch request here?
+export const saveNewJob = (company, position, date, title) => (dispatch) => {
+  dispatch({
+    type: types.SAVE_NEW_JOB,
+  });
+};
+
 export const updateApps = () => {
   // Does nothing so far
 };
