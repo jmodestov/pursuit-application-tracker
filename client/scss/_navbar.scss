@@ -8,6 +8,7 @@
   border: 1px black solid;
   align-items: center;
   justify-content: space-between;
+  width: 100%;
   height: 65px;
   padding: 0px 40px;
   background-color: rgb(137, 170, 207);
@@ -15,10 +16,12 @@
   #homeLogo {
     font-size: 2rem;
     color: whitesmoke;
+    margin-left: 40px;
   }
 
   #username{
     font-size: 1.2rem;
     color: whitesmoke;
+    margin-right: 40px;
   }
 }

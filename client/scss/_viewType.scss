@@ -5,8 +5,9 @@
 
 #viewType {
   display: flex;
+  width: 100%;
   height: 70px;
-  border: 1px black solid;
+  // border: 1px black solid;
   align-items: center;
   justify-content: space-between;
   padding: 0px 40px;
@@ -19,9 +20,13 @@
     border-radius: 10px;
     font-size: 1.2rem;
   }
+  #optionButtons {
+    margin-left: 40px;
+  }
 
   #newRecord {
     background-color: rgb(4, 194, 4);
+    margin-right: 40px;
   }
   .viewOption{
     margin-right: 15px;

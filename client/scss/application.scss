@@ -1,2 +1,10 @@
 @import '_navbar';
 @import '_viewType';
+@import '_mainDisplay';
+
+#app {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}

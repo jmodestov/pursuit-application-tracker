@@ -22,7 +22,7 @@ appListController.newAppItem = (req, res, next) => {
     {
       companyName: 'Neflix',
       positionTitle: 'Software Engineer',
-      dateApplied: 'TestDate',
+      dateApplied: '09/18/20',
       status: 'Pending',
     },
     (err, app) => {

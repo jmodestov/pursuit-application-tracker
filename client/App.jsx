@@ -1,7 +1,11 @@
 import React from 'react';
+
 import { connect } from 'react-redux';
+import { bindActionCreators } from 'redux';
+
 import NavBar from './components/navbar.jsx';
 import ViewOptions from './components/viewOptions.jsx';
+import MainDisplay from './components/mainDisplay.jsx';
 
 import * as actions from './actions/actions';
 
@@ -15,18 +19,17 @@ const mapStateToProps = (state) => ({
   newStatus: state.jobApps.newStatus,
 });
 
-const mapDispatchToProps = (dispatch) => ({
-  loadApps: () => dispatch(actions.loadApps()),
-});
+const mapDispatchToProps = (dispatch) => bindActionCreators(actions, dispatch);
 
-const App = (props) => {
-  return (
-    <div id="app">
-      <NavBar />
-      <ViewOptions />
-      <h1>Testing Testing</h1>
-    </div>
-  );
-};
+// Work on PropType validation.
+
+const App = (props) => (
+  <div id="app">
+    <NavBar />
+    <ViewOptions />
+
+    <MainDisplay loadApps={props.loadApps} jobsApplied={props.jobsApplied} />
+  </div>
+);
 
 export default connect(mapStateToProps, mapDispatchToProps)(App);

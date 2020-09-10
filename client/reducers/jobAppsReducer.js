@@ -1,7 +1,7 @@
 import * as types from '../constants/actionTypes';
 
 const initialState = {
-  jobsApplied: 0,
+  josbApplied: [],
   newCompany: '',
   newPosition: '',
   newDate: '',
@@ -13,12 +13,9 @@ const jobAppsReducer = (state = initialState, action) => {
   switch (action.type) {
     case types.LOAD_JOB_APPS:
       // payload will contain the collection of applied job items
-      jobsApplied = action.payload.reduce((total) => {
-        total += 1;
-        return total;
-      }, 0);
+      // updates the number of jobsApplied upon loading
+      jobsApplied = action.payload;
 
-      console.log('Inside of the jobAppsReducer');
       return {
         ...state,
         jobsApplied,
