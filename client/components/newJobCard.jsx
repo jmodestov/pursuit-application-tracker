@@ -11,6 +11,7 @@ const NewJobCard = (props) => {
     updateNewDate,
     updateNewStatus,
     saveNewJob,
+    loadApps,
   } = props;
   // each div should contain input areas
   return (
@@ -52,7 +53,10 @@ const NewJobCard = (props) => {
       <button
         id="Save-New"
         type="submit"
-        onClick={(e) => saveNewJob(newCompany, newPosition, newDate, newStatus)}
+        onClick={() => {
+          saveNewJob(newCompany, newPosition, newDate, newStatus);
+          loadApps();
+        }}
       >
         Save
       </button>

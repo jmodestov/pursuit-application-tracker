@@ -50,6 +50,11 @@ const jobAppsReducer = (state = initialState, action) => {
       // do fetch request here?
       return {
         ...state,
+        newCompany: '',
+        newPosition: '',
+        newDate: '',
+        newStatus: '',
+        addJobCard: false,
       };
     default:
       return state;

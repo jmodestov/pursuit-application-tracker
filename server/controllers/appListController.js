@@ -18,12 +18,14 @@ appListController.getAllApps = (req, res, next) => {
 };
 
 appListController.newAppItem = (req, res, next) => {
+  // req.body contains company, position, date, and title key-value pairs
+
   Application.create(
     {
-      companyName: 'Neflix',
-      positionTitle: 'Software Engineer',
-      dateApplied: '09/20/20',
-      status: 'Pending',
+      companyName: req.body.company,
+      positionTitle: req.body.position,
+      dateApplied: req.body.date,
+      status: req.body.status,
     },
     (err, app) => {
       if (err) {

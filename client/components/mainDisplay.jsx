@@ -39,6 +39,7 @@ const MainDisplay = (props) => {
         updateNewDate={updateNewDate}
         updateNewStatus={updateNewStatus}
         saveNewJob={saveNewJob}
+        loadApps={loadApps}
       />
     );
   }

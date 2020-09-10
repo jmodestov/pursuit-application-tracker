@@ -48,9 +48,23 @@ export const updateNewStatus = (data) => (dispatch) => {
 };
 
 // Do fetch request here?
-export const saveNewJob = (company, position, date, title) => (dispatch) => {
-  dispatch({
-    type: types.SAVE_NEW_JOB,
+export const saveNewJob = (company, position, date, status) => (dispatch) => {
+  const newJobObj = {
+    company,
+    position,
+    date,
+    status,
+  };
+  fetch('/api/addJobRecord', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify(newJobObj),
+  }).then(() => {
+    dispatch({
+      type: types.SAVE_NEW_JOB,
+    });
   });
 };
 
