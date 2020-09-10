@@ -15,8 +15,8 @@ const ViewOptions = (props) => {
         </button>
       </div>
 
-      <button type="button" className="addRecord" id="newJob">
-        Not Yet Applied
+      <button type="button" id="newRecord">
+        + New Job
       </button>
     </div>
   );
