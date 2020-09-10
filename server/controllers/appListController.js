@@ -4,15 +4,15 @@ const Application = require('../models/applicationModel');
 const appListController = {};
 
 appListController.getAllApps = (req, res, next) => {
-  Application.find({}, (err, app) => {
+  Application.find({}, (err, apps) => {
     if (err) {
       console.log('error while retreiving all applications');
       return next();
     }
     console.log('Retrieving all job applications');
-    console.log(app);
+    console.log(apps);
     // app will be an empty array if the DB applications collection is empty
-    res.locals.app = app;
+    res.locals.apps = apps;
     return next();
   });
 };
