@@ -17,6 +17,8 @@ const mapStateToProps = (state) => ({
   newPosition: state.jobApps.newPosition,
   newDate: state.jobApps.newDate,
   newStatus: state.jobApps.newStatus,
+  // addJob is true if user wants to add a job entry
+  addJobCard: state.jobApps.addJobCard,
 });
 
 const mapDispatchToProps = (dispatch) => bindActionCreators(actions, dispatch);
@@ -26,9 +28,13 @@ const mapDispatchToProps = (dispatch) => bindActionCreators(actions, dispatch);
 const App = (props) => (
   <div id="app">
     <NavBar />
-    <ViewOptions />
+    <ViewOptions addJob={props.addJob} />
 
-    <MainDisplay loadApps={props.loadApps} jobsApplied={props.jobsApplied} />
+    <MainDisplay
+      loadApps={props.loadApps}
+      jobsApplied={props.jobsApplied}
+      addJobCard={props.addJobCard}
+    />
   </div>
 );
 

@@ -13,6 +13,11 @@ export const loadApps = () => (dispatch) => {
     .catch(console.error);
 };
 
+export const addJob = () => (dispatch) => {
+  dispatch({
+    type: types.ADD_JOB_APP,
+  });
+};
 export const updateApps = () => {
   // Does nothing so far
 };

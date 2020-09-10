@@ -6,6 +6,7 @@ const initialState = {
   newPosition: '',
   newDate: '',
   newStatus: '',
+  addJobCard: false,
 };
 
 const jobAppsReducer = (state = initialState, action) => {
@@ -19,6 +20,11 @@ const jobAppsReducer = (state = initialState, action) => {
       return {
         ...state,
         jobsApplied,
+      };
+    case types.ADD_JOB_APP:
+      return {
+        ...state,
+        addJobCard: true,
       };
     default:
       return state;

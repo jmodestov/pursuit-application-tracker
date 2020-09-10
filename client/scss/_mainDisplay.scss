@@ -34,5 +34,38 @@
       cursor: pointer;
       border: 1px solid red;
     }
+
+    &#New-Job-Card{
+     
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      padding-top: 10px;
+      padding-bottom: 5px;
+      height: 70px;
+  
+     
+      #New-Job-Inputs{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        align-items: center;
+        width: 100%;
+        
+      }
+
+      #Save-New {
+        background-color: rgb(4, 194, 4);
+        border: none;
+        padding: 3px 10px;
+        border-radius: 10px;
+      }
+    }
+    
   }
+
+  
+
+
+
+
 }

@@ -15,7 +15,7 @@ const ViewOptions = (props) => {
         </button>
       </div>
 
-      <button type="button" id="newRecord">
+      <button type="button" id="newRecord" onClick={() => props.addJob()}>
         + New Job
       </button>
     </div>
