@@ -34,6 +34,14 @@ const App = (props) => (
       loadApps={props.loadApps}
       jobsApplied={props.jobsApplied}
       addJobCard={props.addJobCard}
+      newCompany={props.newCompany}
+      newPosition={props.newPosition}
+      newDate={props.newDate}
+      newStatus={props.newStatus}
+      updateNewCompany={props.updateNewCompany}
+      updateNewPosition={props.updateNewPosition}
+      updateNewDate={props.updateNewDate}
+      updateNewStatus={props.updateNewStatus}
     />
   </div>
 );

@@ -26,6 +26,26 @@ const jobAppsReducer = (state = initialState, action) => {
         ...state,
         addJobCard: true,
       };
+    case types.UPDATE_NEW_COMPANY:
+      return {
+        ...state,
+        newCompany: action.payload,
+      };
+    case types.UPDATE_NEW_POSITION:
+      return {
+        ...state,
+        newPosition: action.payload,
+      };
+    case types.UPDATE_NEW_DATE:
+      return {
+        ...state,
+        newDate: action.payload,
+      };
+    case types.UPDATE_NEW_STATUS:
+      return {
+        ...state,
+        newStatus: action.payload,
+      };
     default:
       return state;
   }

@@ -4,7 +4,19 @@ import NewJobCard from './newJobCard.jsx';
 
 const MainDisplay = (props) => {
   // Where do we do fetch to see if we have applications collections?
-  const { jobsApplied, loadApps, addJobCard } = props;
+  const {
+    jobsApplied,
+    loadApps,
+    addJobCard,
+    updateNewCompany,
+    updateNewPosition,
+    updateNewDate,
+    updateNewStatus,
+    newCompany,
+    newPosition,
+    newDate,
+    newStatus,
+  } = props;
   const items = [];
 
   if (jobsApplied && jobsApplied.length !== 0) {
@@ -15,7 +27,18 @@ const MainDisplay = (props) => {
   // Add a job if addJob is true. This new record will have input fields.
   console.log('This should be false ', addJobCard);
   if (addJobCard) {
-    items.unshift(<NewJobCard />);
+    items.unshift(
+      <NewJobCard
+        newCompany={newCompany}
+        newPosition={newPosition}
+        newDate={newDate}
+        newStatus={newStatus}
+        updateNewCompany={updateNewCompany}
+        updateNewPosition={updateNewPosition}
+        updateNewDate={updateNewDate}
+        updateNewStatus={updateNewStatus}
+      />
+    );
   }
 
   console.log('Inside if of MainDispaly');
