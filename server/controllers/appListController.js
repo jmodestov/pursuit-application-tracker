@@ -39,4 +39,14 @@ appListController.newAppItem = (req, res, next) => {
   );
 };
 
+appListController.deleteJob = (req, res, next) => {
+  // req.body will contain jobId which is the _id of the Applications collection
+
+  Application.deleteOne({ _id: req.body.jobId }, (err) => {
+    if (err) console.log('Could not delete from DB');
+    return next();
+  });
+  return next();
+};
+
 module.exports = appListController;

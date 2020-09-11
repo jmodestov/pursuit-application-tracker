@@ -5,8 +5,10 @@ import NewJobCard from './newJobCard.jsx';
 const MainDisplay = (props) => {
   // Where do we do fetch to see if we have applications collections?
   const {
+    deleteJob,
     jobsApplied,
     loadApps,
+    addJob,
     addJobCard,
     updateNewCompany,
     updateNewPosition,
@@ -21,8 +23,8 @@ const MainDisplay = (props) => {
   const items = [];
 
   if (jobsApplied && jobsApplied.length !== 0) {
-    props.jobsApplied.forEach((job, idx) => {
-      items.unshift(<AppliedJobCard job={job} />);
+    jobsApplied.forEach((job, idx) => {
+      items.unshift(<AppliedJobCard job={job} deleteJob={deleteJob} />);
     });
   }
   // Add a job if addJob is true. This new record will have input fields.
@@ -42,10 +44,18 @@ const MainDisplay = (props) => {
         loadApps={loadApps}
       />
     );
+  } else if (jobsApplied && jobsApplied.length === 0) {
+    // push into items a div telling the user to apply
+    items.unshift(
+      <div id="Zero-Jobs">
+        <button type="button" id="newRecord" onClick={() => addJob()}>
+          + Let's Do This!
+        </button>
+        <h1>"You better work" - RuPaul</h1>
+      </div>
+    );
   }
 
-  console.log('Inside if of MainDispaly');
-  console.log(jobsApplied);
   return (
     <div id="Main-Container">
       <div id="labels">

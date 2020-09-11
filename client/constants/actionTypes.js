@@ -11,3 +11,5 @@ export const UPDATE_NEW_DATE = 'UPDATE_NEW_DATE';
 export const UPDATE_NEW_STATUS = 'UPDATE_NEW_STATUS';
 
 export const SAVE_NEW_JOB = 'SAVE_NEW_JOB';
+
+export const DELETE_JOB = 'DELETE_JOB';

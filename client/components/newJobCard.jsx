@@ -35,19 +35,22 @@ const NewJobCard = (props) => {
         </div>
         <div className="Date-Applied">
           <input
-            type="text"
+            type="date"
             id="Date"
             name="Date"
             onChange={(e) => updateNewDate(e.target.value)}
           />
         </div>
         <div className="App-Status">
-          <input
-            type="text"
-            id="Status"
-            name="Status"
-            onChange={(e) => updateNewStatus(e.target.value)}
-          />
+          <select name="status" id="Status" onChange={(e) => updateNewStatus(e.target.value)}>
+            <option value="Not Heard Back">Not Heard Back</option>
+            <option value="Phone Interview">Phone Interview</option>
+            <option value="Technical Interview">Technical Interview</option>
+            <option value="Final Interview">Final Interview</option>
+            <option value="Expecting Offer">Expecting Offer</option>
+            <option value="Received Offer">Received Offer</option>
+            <option value="They don't deserve you!">They don&#39;t desrve you!</option>
+          </select>
         </div>
       </div>
       <button

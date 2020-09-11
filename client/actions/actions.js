@@ -1,4 +1,5 @@
 import * as types from '../constants/actionTypes';
+import jobAppsReducer from '../reducers/jobAppsReducer';
 
 export const loadApps = () => (dispatch) => {
   fetch('/api')
@@ -68,6 +69,27 @@ export const saveNewJob = (company, position, date, status) => (dispatch) => {
   });
 };
 
-export const updateApps = () => {
-  // Does nothing so far
+export const deleteJob = (jobId) => (dispatch) => {
+  const deleteObj = {
+    jobId,
+  };
+
+  fetch('/api/deleteRecord', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify(deleteObj),
+  }).then(
+    fetch('/api')
+      .then((response) => response.json())
+      .then((data) => {
+        dispatch({
+          type: types.LOAD_JOB_APPS,
+          // payload will consist of an array of jobItems
+          payload: data,
+        });
+      })
+      .catch(console.error)
+  );
 };

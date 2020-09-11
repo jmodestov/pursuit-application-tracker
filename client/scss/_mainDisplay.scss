@@ -16,7 +16,7 @@
     padding: 0px 20px;
    
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr 0.01fr;
     align-items: center;
   }
 
@@ -27,7 +27,7 @@
     padding: 0px 20px;
     border-radius: 10px;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr 0.01fr;
     align-items: center;
 
     &:hover{
@@ -47,7 +47,7 @@
      
       #New-Job-Inputs{
         display: grid;
-        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr 1fr 0.01fr;
         align-items: center;
         width: 100%;
         
@@ -63,7 +63,30 @@
     
   }
 
-  
+  #Zero-Jobs{
+    // border: 1px red solid;
+    text-align: center;
+    height: 40vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    button {
+    color: black;
+    padding: 7px 20px;
+    border: none;
+    border-radius: 10px;
+    font-size: 1.2rem;
+    margin-bottom: 25px;
+    width: auto;
+  }
+
+  #newRecord {
+    background-color: rgb(4, 194, 4);
+  }
+    
+  }
 
 
 

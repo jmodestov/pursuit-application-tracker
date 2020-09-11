@@ -31,6 +31,8 @@ const App = (props) => (
     <ViewOptions addJob={props.addJob} />
 
     <MainDisplay
+      deleteJob={props.deleteJob}
+      addJob={props.addJob}
       loadApps={props.loadApps}
       jobsApplied={props.jobsApplied}
       addJobCard={props.addJobCard}

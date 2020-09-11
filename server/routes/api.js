@@ -13,4 +13,8 @@ router.post('/addJobRecord', appListController.newAppItem, (req, res) => {
   res.sendStatus(200);
 });
 
+router.post('/deleteRecord', appListController.deleteJob, (req, res) => {
+  res.sendStatus(200);
+});
+
 module.exports = router;

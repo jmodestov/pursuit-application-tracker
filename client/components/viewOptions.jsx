@@ -1,6 +1,7 @@
 import React from 'react';
 
 const ViewOptions = (props) => {
+  const { addJob } = props;
   return (
     <div id="viewType">
       <div id="optionButtons">
@@ -15,7 +16,7 @@ const ViewOptions = (props) => {
         </button>
       </div>
 
-      <button type="button" id="newRecord" onClick={() => props.addJob()}>
+      <button type="button" id="newRecord" onClick={() => addJob()}>
         + New Job
       </button>
     </div>
