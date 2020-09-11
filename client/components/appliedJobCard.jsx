@@ -1,4 +1,5 @@
 import React from 'react';
+import { loadApps } from '../actions/actions';
 
 const AppliedJobCard = (props) => {
   const { job, deleteJob } = props;
@@ -8,7 +9,13 @@ const AppliedJobCard = (props) => {
       <div className="Position-Title">{job.positionTitle}</div>
       <div className="Date-Applied">{job.dateApplied}</div>
       <div className="App-Status">{job.status}</div>
-      <button type="submit" onClick={() => deleteJob(job._id)}>
+      <button
+        type="submit"
+        onClick={() => {
+          deleteJob(job._id);
+          loadApps();
+        }}
+      >
         <svg
           width="1em"
           height="1em"

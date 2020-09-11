@@ -62,11 +62,13 @@ export const saveNewJob = (company, position, date, status) => (dispatch) => {
       'Content-Type': 'application/json',
     },
     body: JSON.stringify(newJobObj),
-  }).then(() => {
-    dispatch({
-      type: types.SAVE_NEW_JOB,
-    });
-  });
+  })
+    .then(() => {
+      dispatch({
+        type: types.SAVE_NEW_JOB,
+      });
+    })
+    .then(loadApps());
 };
 
 export const deleteJob = (jobId) => (dispatch) => {
@@ -80,16 +82,11 @@ export const deleteJob = (jobId) => (dispatch) => {
       'Content-Type': 'application/json',
     },
     body: JSON.stringify(deleteObj),
-  }).then(
-    fetch('/api')
-      .then((response) => response.json())
-      .then((data) => {
-        dispatch({
-          type: types.LOAD_JOB_APPS,
-          // payload will consist of an array of jobItems
-          payload: data,
-        });
+  })
+    .then(
+      dispatch({
+        type: types.DELETE_JOB,
       })
-      .catch(console.error)
-  );
+    )
+    .then(loadApps());
 };

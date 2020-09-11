@@ -10,7 +10,7 @@
   border-radius: 10px;
 
   #labels {
-    border-bottom: 1px solid black;
+    border-bottom: 1px solid rgb(35, 50, 119);
     height: 40px;
     margin: 5px 10px;
     padding: 0px 20px;
@@ -32,7 +32,7 @@
 
     &:hover{
       cursor: pointer;
-      border: 1px solid red;
+      border: 1px solid rgb(0, 119, 255);
     }
 
     &#New-Job-Card{
