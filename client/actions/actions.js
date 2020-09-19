@@ -14,39 +14,29 @@ export const loadApps = () => (dispatch) => {
     .catch(console.error);
 };
 
-export const addJob = () => (dispatch) => {
-  dispatch({
-    type: types.ADD_JOB_APP,
-  });
-};
+export const addJob = () => ({
+  type: types.ADD_JOB_APP,
+});
 
-export const updateNewCompany = (data) => (dispatch) => {
-  dispatch({
-    type: types.UPDATE_NEW_COMPANY,
-    payload: data,
-  });
-};
+export const updateNewCompany = (data) => ({
+  type: types.UPDATE_NEW_COMPANY,
+  payload: data,
+});
 
-export const updateNewPosition = (data) => (dispatch) => {
-  dispatch({
-    type: types.UPDATE_NEW_POSITION,
-    payload: data,
-  });
-};
+export const updateNewPosition = (data) => ({
+  type: types.UPDATE_NEW_POSITION,
+  payload: data,
+});
 
-export const updateNewDate = (data) => (dispatch) => {
-  dispatch({
-    type: types.UPDATE_NEW_DATE,
-    payload: data,
-  });
-};
+export const updateNewDate = (data) => ({
+  type: types.UPDATE_NEW_DATE,
+  payload: data,
+});
 
-export const updateNewStatus = (data) => (dispatch) => {
-  dispatch({
-    type: types.UPDATE_NEW_STATUS,
-    payload: data,
-  });
-};
+export const updateNewStatus = (data) => ({
+  type: types.UPDATE_NEW_STATUS,
+  payload: data,
+});
 
 // Do fetch request here?
 export const saveNewJob = (company, position, date, status) => (dispatch) => {
