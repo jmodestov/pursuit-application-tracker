@@ -25,28 +25,47 @@ const mapDispatchToProps = (dispatch) => bindActionCreators(actions, dispatch);
 
 // Work on PropType validation.
 
-const App = (props) => (
-  <div id="app">
-    <NavBar />
-    <ViewOptions addJob={props.addJob} />
+// Include Route when signup page is created.
+const App = (props) => {
+  const {
+    deleteJob,
+    addJob,
+    loadApps,
+    jobsApplied,
+    addJobCard,
+    newCompany,
+    newPosition,
+    newDate,
+    newStatus,
+    updateNewCompany,
+    updateNewPosition,
+    updateNewDate,
+    updateNewStatus,
+    saveNewJob,
+  } = props;
+  return (
+    <div id="app">
+      <NavBar />
+      <ViewOptions addJob={props.addJob} />
 
-    <MainDisplay
-      deleteJob={props.deleteJob}
-      addJob={props.addJob}
-      loadApps={props.loadApps}
-      jobsApplied={props.jobsApplied}
-      addJobCard={props.addJobCard}
-      newCompany={props.newCompany}
-      newPosition={props.newPosition}
-      newDate={props.newDate}
-      newStatus={props.newStatus}
-      updateNewCompany={props.updateNewCompany}
-      updateNewPosition={props.updateNewPosition}
-      updateNewDate={props.updateNewDate}
-      updateNewStatus={props.updateNewStatus}
-      saveNewJob={props.saveNewJob}
-    />
-  </div>
-);
+      <MainDisplay
+        deleteJob={deleteJob}
+        addJob={addJob}
+        loadApps={loadApps}
+        jobsApplied={jobsApplied}
+        addJobCard={addJobCard}
+        newCompany={newCompany}
+        newPosition={newPosition}
+        newDate={newDate}
+        newStatus={newStatus}
+        updateNewCompany={updateNewCompany}
+        updateNewPosition={updateNewPosition}
+        updateNewDate={updateNewDate}
+        updateNewStatus={updateNewStatus}
+        saveNewJob={saveNewJob}
+      />
+    </div>
+  );
+};
 
 export default connect(mapStateToProps, mapDispatchToProps)(App);

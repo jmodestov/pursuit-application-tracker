@@ -13,7 +13,7 @@ import { loadApps } from './actions/actions';
 
 const store = createStore(reducers, composeWithDevTools(applyMiddleware(thunk)));
 
-// // Dispatch load Apps to load all job entries
+// Dispatch load Apps to load all job entries
 store.dispatch(loadApps());
 
 export default store;

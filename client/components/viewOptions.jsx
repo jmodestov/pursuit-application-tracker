@@ -1,7 +1,7 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
-const ViewOptions = (props) => {
-  const { addJob } = props;
+const ViewOptions = ({ addJob }) => {
   return (
     <div id="viewType">
       <div id="optionButtons">
@@ -21,6 +21,10 @@ const ViewOptions = (props) => {
       </button>
     </div>
   );
+};
+
+ViewOptions.propTypes = {
+  addJob: PropTypes.func.isRequired,
 };
 
 export default ViewOptions;
