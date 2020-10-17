@@ -1,6 +1,6 @@
 import React from 'react';
 
-const NavBar = (props) => {
+const NavBar = () => {
   return (
     <div id="navbar">
       <div id="homeLogo">Pursuit</div>
