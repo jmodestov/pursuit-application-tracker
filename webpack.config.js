@@ -4,8 +4,8 @@ module.exports = {
   // Webpack will use built-in optimization accordingly
   mode: process.env.NODE_ENV,
 
-  // Webpack starts bundlinng at index.js. Recursively builds dependancy graph.
-  entry: './client/index.js',
+  // Webpack starts bundlinng at index.jsx. Recursively builds dependancy graph.
+  entry: './client/index.jsx',
 
   output: {
     // bundling results will be emitted to this path
