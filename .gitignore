@@ -3,3 +3,4 @@ build/*.js
 npm-debug.log
 .DS_Store
 package-lock.json
+.env
