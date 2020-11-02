@@ -6,11 +6,13 @@ const apiRouter = require('./routes/api');
 
 const PORT = 3000;
 
+require('dotenv').configure();
+
 const app = express();
 
 // URI to MongoDB Atlas
-const mongoURI =
-  'mongodb+srv://pursuitAdmin:pursuitDB246@pursuitdb.r3wgo.mongodb.net/pursuitDB?retryWrites=true&w=majority';
+const mongoURI = process.env.MONGO_URI;
+
 mongoose.connect(mongoURI, { useNewUrlParser: true, useUnifiedTopology: true });
 
 // Handles the parsing of any incoming requests.
