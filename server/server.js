@@ -6,7 +6,7 @@ const apiRouter = require('./routes/api');
 
 const PORT = 3000;
 
-require('dotenv').configure();
+require('dotenv').config();
 
 const app = express();
 
