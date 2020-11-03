@@ -27,8 +27,10 @@ const MainDisplay = (props) => {
       items.unshift(<AppliedJobCard job={job} deleteJob={deleteJob} />);
     });
   }
+
   // Add a job if addJob is true. This new record will have input fields.
   loadApps();
+
   if (addJobCard) {
     items.unshift(<NewJobCard />);
   } else if (jobsApplied && jobsApplied.length === 0) {
