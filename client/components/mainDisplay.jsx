@@ -30,20 +30,7 @@ const MainDisplay = (props) => {
   // Add a job if addJob is true. This new record will have input fields.
   loadApps();
   if (addJobCard) {
-    items.unshift(
-      <NewJobCard
-        newCompany={newCompany}
-        newPosition={newPosition}
-        newDate={newDate}
-        newStatus={newStatus}
-        updateNewCompany={updateNewCompany}
-        updateNewPosition={updateNewPosition}
-        updateNewDate={updateNewDate}
-        updateNewStatus={updateNewStatus}
-        saveNewJob={saveNewJob}
-        loadApps={loadApps}
-      />
-    );
+    items.unshift(<NewJobCard />);
   } else if (jobsApplied && jobsApplied.length === 0) {
     // push into items a div telling the user to apply
     items.unshift(

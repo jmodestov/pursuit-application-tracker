@@ -1,4 +1,17 @@
 import React from 'react';
+import { bindActionCreators } from 'redux';
+import { connect } from 'react-redux';
+import PropTypes, { func } from 'prop-types';
+import * as actions from '../actions/actions';
+
+const mapStateToProps = (state) => ({
+  newCompany: state.jobApps.newCompany,
+  newPosition: state.jobApps.newPosition,
+  newDate: state.jobApps.newDate,
+  newStatus: state.jobApps.newStatus,
+});
+
+const mapDispatchToProps = (dispatch) => bindActionCreators(actions, dispatch);
 
 const NewJobCard = (props) => {
   const {
@@ -67,4 +80,17 @@ const NewJobCard = (props) => {
   );
 };
 
-export default NewJobCard;
+NewJobCard.propTypes = {
+  newCompany: PropTypes.string.isRequired,
+  newPosition: PropTypes.string.isRequired,
+  newDate: PropTypes.string.isRequired,
+  newStatus: PropTypes.string.isRequired,
+  updateNewCompany: PropTypes.func.isRequired,
+  updateNewPosition: PropTypes.func.isRequired,
+  updateNewDate: PropTypes.func.isRequired,
+  updateNewStatus: PropTypes.func.isRequired,
+  saveNewJob: PropTypes.func.isRequired,
+  loadApps: PropTypes.func.isRequired,
+};
+
+export default connect(mapStateToProps, mapDispatchToProps)(NewJobCard);
