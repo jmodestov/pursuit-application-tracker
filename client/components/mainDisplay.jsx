@@ -60,7 +60,7 @@ MainDisplay.propTypes = {
   jobsApplied: PropTypes.arrayOf(PropTypes.string).isRequired,
   loadApps: PropTypes.func.isRequired,
   addJob: PropTypes.func.isRequired,
-  addJobCard: PropTypes.func.isRequired,
+  addJobCard: PropTypes.bool.isRequired,
 };
 
 export default connect(mapStateToProps, mapDispatchToProps)(MainDisplay);
