@@ -3,6 +3,14 @@ import PropTypes from 'prop-types';
 import AppliedJobCard from './appliedJobCard.jsx';
 import NewJobCard from './newJobCard.jsx';
 
+const mapStateToProps = (state) => ({
+  deleteJob: state.jobApps.deleteJob,
+  jobsApplied: state.jobApps.jobsApplied,
+  loadApps: state.jobApps.loadApps,
+  addJob: state.jobApps.addJob,
+  addJobCard: state.addJobCard.addJobCard,
+});
+
 const MainDisplay = ({ deleteJob, jobsApplied, loadApps, addJob, addJobCard }) => {
   const items = [];
 
