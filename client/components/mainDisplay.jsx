@@ -1,25 +1,11 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import AppliedJobCard from './appliedJobCard.jsx';
 import NewJobCard from './newJobCard.jsx';
 
 const MainDisplay = (props) => {
   // Where do we do fetch to see if we have applications collections?
-  const {
-    deleteJob,
-    jobsApplied,
-    loadApps,
-    addJob,
-    addJobCard,
-    updateNewCompany,
-    updateNewPosition,
-    updateNewDate,
-    updateNewStatus,
-    newCompany,
-    newPosition,
-    newDate,
-    newStatus,
-    saveNewJob,
-  } = props;
+  const { deleteJob, jobsApplied, loadApps, addJob, addJobCard } = props;
   const items = [];
 
   if (jobsApplied && jobsApplied.length !== 0) {
@@ -56,6 +42,14 @@ const MainDisplay = (props) => {
       {items}
     </div>
   );
+};
+
+MainDisplay.propTypes = {
+  deleteJob: PropTypes.func.isRequired,
+  jobsApplied: PropTypes.arrayOf(PropTypes.string).isRequired,
+  loadApps: PropTypes.func.isRequired,
+  addJob: PropTypes.func.isRequired,
+  addJobCard: PropTypes.func.isRequired,
 };
 
 export default MainDisplay;
