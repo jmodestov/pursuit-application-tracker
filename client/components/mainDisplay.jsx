@@ -3,9 +3,7 @@ import PropTypes from 'prop-types';
 import AppliedJobCard from './appliedJobCard.jsx';
 import NewJobCard from './newJobCard.jsx';
 
-const MainDisplay = (props) => {
-  // Where do we do fetch to see if we have applications collections?
-  const { deleteJob, jobsApplied, loadApps, addJob, addJobCard } = props;
+const MainDisplay = ({ deleteJob, jobsApplied, loadApps, addJob, addJobCard }) => {
   const items = [];
 
   if (jobsApplied && jobsApplied.length !== 0) {
