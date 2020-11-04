@@ -1,7 +1,10 @@
 import React from 'react';
+import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
+import { bindActionCreators } from 'redux';
 import AppliedJobCard from './appliedJobCard.jsx';
 import NewJobCard from './newJobCard.jsx';
+import * as actions from '../actions/actions';
 
 const mapStateToProps = (state) => ({
   deleteJob: state.jobApps.deleteJob,
@@ -10,6 +13,8 @@ const mapStateToProps = (state) => ({
   addJob: state.jobApps.addJob,
   addJobCard: state.addJobCard.addJobCard,
 });
+
+const mapDispatchToProps = (dispatch) => bindActionCreators(actions, dispatch);
 
 const MainDisplay = ({ deleteJob, jobsApplied, loadApps, addJob, addJobCard }) => {
   const items = [];
@@ -58,4 +63,4 @@ MainDisplay.propTypes = {
   addJobCard: PropTypes.func.isRequired,
 };
 
-export default MainDisplay;
+export default connect(mapStateToProps, mapDispatchToProps)(MainDisplay);
