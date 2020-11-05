@@ -47,23 +47,7 @@ const App = (props) => {
     <div id="app">
       <NavBar />
       <ViewOptions addJob={props.addJob} />
-
-      <MainDisplay
-        deleteJob={deleteJob}
-        addJob={addJob}
-        loadApps={loadApps}
-        jobsApplied={jobsApplied}
-        addJobCard={addJobCard}
-        newCompany={newCompany}
-        newPosition={newPosition}
-        newDate={newDate}
-        newStatus={newStatus}
-        updateNewCompany={updateNewCompany}
-        updateNewPosition={updateNewPosition}
-        updateNewDate={updateNewDate}
-        updateNewStatus={updateNewStatus}
-        saveNewJob={saveNewJob}
-      />
+      <MainDisplay />
     </div>
   );
 };

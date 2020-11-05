@@ -11,7 +11,7 @@ const mapStateToProps = (state) => ({
   jobsApplied: state.jobApps.jobsApplied,
   loadApps: state.jobApps.loadApps,
   addJob: state.jobApps.addJob,
-  addJobCard: state.addJobCard.addJobCard,
+  addJobCard: state.jobApps.addJobCard,
 });
 
 const mapDispatchToProps = (dispatch) => bindActionCreators(actions, dispatch);
